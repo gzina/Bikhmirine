@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button  (click)="goBack()"> 
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+
+  <ion-list padding>
+    <ion-item>
+      <ion-icon name="search"></ion-icon>
+      <ion-input type="text" placeholder="Que recherchez vous?" name="searchWord" [(ngModel)]="searchWord" >
+      </ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>Categories</ion-label>
+      <ion-select [(ngModel)]="category" placeholder="selectionnez une Categories">
+        <ion-select-option *ngFor="let item of categories" value="item.id">{{item.id}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)='validate()' expand="block">Valider</ion-button>
+  </ion-toolbar>
+</ion-footer>

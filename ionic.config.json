@@ -1,0 +1,7 @@
+{
+  "name": "bikhmirine",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
